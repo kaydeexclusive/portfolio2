@@ -22,9 +22,21 @@
     font-size: 36px;
     margin: 5px 0 10px;
     font-size: 40px;
-      color: pink;
-      font-weight: 500;
+      color:rgb(253, 185, 57);
+      font-weight: 400;
       font-family: 'Roboto Condensed', sans-serif;
+  }
+  .content {
+    max-width: 1200px;
+    display: block;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 768px) {
+    h2 {
+      font-size: 70px;
+      color:pink;
+      font-weight: 400;
+    }
   }
   /*         header styling */
   .site-header {
@@ -33,21 +45,36 @@
             align-items: center;
             flex-direction: column;
     background-color:black;
-            justify-content: space-between;
-            flex-direction: row; 
+  }
+  @media screen and (min-width: 1250px) {
+    .site-header {
+              justify-content: space-between;
+              flex-direction: row;
+              background-color: black;
+    } 
   }
   .nav-links {
     display: none;
     width: 100%;
     display: block;
-    background-color:black;
+    background-color:#FFF;
+    }
+    @media screen and (min-width: 1250px) {
+      .nav-links {
+        display: block;
+        background-color: black;
+      }
     }
   .kmenu {
     padding: 0;
     display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            flex-direction: row;
+  }
+  @media screen and (min-width: 1250px) {
+    .kmenu {
+              flex-direction: row;
+    }
   }
   .kmenu li {
     list-style: none;
@@ -114,12 +141,15 @@
     font-weight: 800;
     font-family: Arial,sans-serif;
     font-size: medium;
-    display: flex;
-    justify-content: space-between;
-
   }
-  #about .about-container-left {
-    -ms-flex-preferred-size: 50%;
+  @media screen and (min-width: 768px) {
+    #about .about-container {
+      display: flex;
+              justify-content: space-between;
+    }
+  }
+              #about .about-container-left {
+    -ms-flex-preferred-size: 50%;  
         flex-basis: 40%;
     background: rgb(55, 60, 75);
     padding: 30px 30px;
@@ -132,16 +162,18 @@
     -ms-flex-preferred-size: 60%;
         flex-basis: 60%;
     background: #F2F3F8;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
   #about .about-container-right img {
     max-width: 100%;
     -ms-flex-item-align: start;
         align-self: flex-start;
+  }
+  @media screen and (min-width: 1200px) {
+    #about .about-container-right img {
+          align-self: stretch;
+    }
   }
   /* ******     Styling of the skill section */
   #skill {
@@ -150,12 +182,13 @@
 }
 .skill--content {
   display: block;
-    display: -ms-flexbox;
-    display: flex;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-        -ms-flex-align: center;
-            align-items: center;
+  }
+  @media screen and (min-width: 768px) {
+    #skill .skill--content {
+      display: flex;
+              justify-content: space-between;
+              align-items: center;
+    }
   }
 .left {
   -ms-flex-preferred-size: 30%;
@@ -176,12 +209,12 @@
   -ms-flex-preferred-size: 65%;
       flex-basis: 65%;
   display: block;
-  display: -webkit-box;
-    display: -ms-flexbox;
+}
+@media screen and (min-width: 768px) {
+  .right {
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+          justify-content: space-between;
+  }
 }
  .item {
   -ms-flex-preferred-size: 32%;
@@ -195,12 +228,16 @@
      border-image: linear-gradient(45deg, #ff9800 0%, purple 100%);
   border-image-slice: 9;
   border-style: solid;
- margin-bottom: 0;
  }
+ @media screen and (min-width: 768px) {
+  .item {
+    margin-bottom: 0;
+  }
+}
 
 .item img {
   max-width: 300px;
-  height: 150px;
+  height: 300px;
 }
 .item h3 {
   color: #FFFFFF;
